@@ -1,0 +1,338 @@
+/* ------------------------------------------------
+   					Universal
+   ------------------------------------------------ */
+*
+	{
+		box-sizing: border-box;
+	}
+
+/* ------------------------------------------------
+   			 	Header & Navigation
+   ------------------------------------------------ */
+#logo
+	{
+	   width: 350px;
+	   height: 350px;
+   }
+
+header
+	{
+		background-image: linear-gradient(#93ffff, #ffffff);
+	}
+
+nav
+	{
+		background-color: #add8e6;
+		font-weight: bold;
+		padding: 0;
+		font-size: 120%;
+	}
+
+nav ul
+	{
+		list-style-type: none;
+		margin: 0;
+		padding-left: 0;
+		font-size: 1.2em;
+	}
+
+nav li
+	{
+		margin: 0;
+		border-bottom: 2px solid #effdff;
+		text-align: center;
+	}
+
+nav a
+	{
+		text-decoration: none;
+		color: #827E7E;
+	}
+
+/* ------------------------------------------------
+   			 		Main Content
+   ------------------------------------------------ */
+body
+	{
+		font-family: Arial, Helvetica, sans-serif;
+	}
+
+main
+	{
+		background-color: #D7ADE6;
+		display: block;
+		padding: 1px 20px 20px 30px;
+		overflow: auto;
+	}
+
+main a
+	{
+		color: #fffeef;
+	}
+
+h1, h2, h3, h4, h5, h6, label, caption
+	{
+		color: purple;
+		font-family: Georgia, "Times New Roman", serif;
+	}
+
+p, dd, dt
+	{
+		color: #fffeef;
+	}
+
+li
+	{
+		color: #fffeef;
+	}
+
+dt
+	{
+		font-weight: bold;
+		text-decoration: underline;
+	}
+
+.content-image
+	{
+		width: 100px;
+		height: 100px;
+	}
+
+#seo-idea
+	{
+		border: 1px solid purple;
+		margin-right: 10px;
+	}
+
+.img-padding-right
+	{
+		padding-right: 10px;
+	}
+
+/* ------------------------------------------------
+   			 			Tables
+   ------------------------------------------------ */
+table
+	{
+		border: 2px solid #e6e0ad;
+	}
+
+td, th
+	{
+		padding: 0.5em;
+		border: 2px solid #e6e0ad;
+		text-align: center;
+	}
+
+th
+	{
+		background-color: #8a79a1;
+		color: #fffeef;
+	}
+
+td
+	{
+		color: #fffeef;
+	}
+
+tr:nth-of-type(odd)
+	{
+		background-color: #8a79a1;
+	}
+
+caption
+	{
+		font-weight: bold;
+		font-size: 110%;
+	}
+
+/* ------------------------------------------------
+   			 			Forms
+   ------------------------------------------------ */
+form
+	{
+		display: flex;
+		flex-flow: column nowrap;
+	}
+
+input, textarea
+	{
+		margin-bottom: .5em;
+	}
+
+/* ------------------------------------------------
+   			 			Utilities
+   ------------------------------------------------ */
+.center
+	{
+		display: block;
+		margin-right: auto;
+		margin-left: auto;
+		width: 50%;
+	}
+
+.circle
+	{
+		shape-outside: circle(50px);
+	}
+
+.flow-left
+	{
+		float: left;
+	}
+
+.important
+	{
+		color: inherit;
+		font-weight: bolder;
+		text-decoration: underline;
+	}
+
+/* ------------------------------------------------
+   			 			Footer
+   ------------------------------------------------ */
+footer
+	{
+		text-align: center;
+		font-family: Georgia, "Times New Roman", serif;
+		font-size: 120%;
+		font-style: italic;
+		background-color: #E6BBAD;
+		color: #827E7E;
+		padding: 2em;
+		max-height: 110px;
+	}
+
+footer a
+	{
+		color: #827E7E;
+	}
+
+/* ------------------------------------------------
+   			 	Media Queries
+   ------------------------------------------------ */
+ /* Medium Layout */
+@media (min-width: 600px)
+	{
+		#logo
+			{
+				width: 400px;
+				height: 350px;
+			}
+
+		nav ul
+			{
+				display: flex;
+				flex-direction: row;
+				flex-wrap: nowrap;
+				justify-content: space-around;
+			}
+
+		nav li
+			{
+				border-bottom: none;
+			}
+
+		.content-image
+			{
+				width: 130px;
+				height: 130px;
+			}
+
+		.circle
+			{
+				shape-outside: circle(75px);
+			}
+
+		form
+			{
+				display: grid;
+				grid-template-columns: 5em 1fr;
+				grid-gap: 1em;
+				width: 60%;
+				max-width: 30em;
+			}
+
+		label
+			{
+				grid-column: 1 / 3;
+			}
+
+		input[type="submit"]
+			{
+				grid-column: 2 / 3;
+				width: 9em;
+			}
+	}
+
+/* Large Layout with Grid display */
+@media (min-width: 1024px)
+	{
+		nav ul
+			{
+				padding-left: 1em;
+				text-align: center;
+			}
+
+		#wrapper
+			{
+				margin: auto;
+				width: 80%;
+			}
+
+		.content-image
+			{
+				width: 150px;
+				height: 150px;
+			}
+
+		.circle
+			{
+				shape-outside: circle(85px);
+			}
+
+		@supports(display: grid)
+			{
+				#wrapper
+					{
+						display: grid;
+						grid-template-columns: 250px auto auto;
+						grid-template-rows: auto auto auto 110px;
+						grid-template-areas: "header header header"
+							   		         "nav main main"
+							                  "nav main main"
+							                  "nav footer footer";
+					}
+
+				nav ul
+					{
+						flex-direction: column;
+						padding-top: 1em;
+					}
+
+				header
+					{
+						grid-area: header;
+					}
+
+				nav
+					{
+						grid-area: nav;
+					}
+
+				div
+					{
+						grid-area: div;
+					}
+
+				main
+					{
+						grid-area: main;
+					}
+
+				footer
+					{
+						grid-area: footer;
+					}
+			}
+	}

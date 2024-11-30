@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Meta Your Page | Meta Tags</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="styles.css">
+		<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+	</head>
+	
+	<body>
+		<div id="wrapper">
+			<header>
+				<a href="index.html"><img id="logo" class="center" src="images/default.png" alt="A light blue and cyan colored tag with the words, 'Meta Your Page', below."></a>
+			</header>
+
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="metatags.html">Meta Tags</a></li>
+					<li><a href="reasons.html">Importance</a></li>
+					<li><a href="practices.html">Best Practices</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+
+			<main>
+				<!-- Meta tag section !-->
+				<h1>What kinds of meta tags are there? How are they used?</h1>
+					<!-- Common Meta Tags !-->
+					<table>
+						<caption>Common Meta Tags</caption>
+						<tr>
+							<th>Meta Tag</th>
+							<th>Description</th>
+							<th>Example</th>
+						</tr>
+						<tr>
+							<td>charset</td>
+							<td>This is how the characters of the HTML page will be encoded, typically set to utf-8 (Unicode Transformation Format 8).</td>
+							<td>&lt;meta charset="utf-8"&gt;</td>
+						</tr>
+						<tr>
+							<td>Title Tag</td>
+							<td>These tags tell search engines and users what the title of the page is and are only visible in search results.</td>
+							<td>&lt;title&gt;My Cool Title&lt;/title&gt;</td>
+						</tr>
+						<tr>
+							<td>Description Tag</td>
+							<td>Tell the search engine how to describe your page to users in search results. These tags display below the page title.</td>
+							<td>&lt;meta name=”description” content="A good meta description brings good traffic."/&gt;</td>
+						</tr>
+						<tr>
+							<td>Robot Meta Tag</td>
+							<td>Specifies if the page should be indexed and/or followed. You can also tell the search engine to neither follow nor index the page to search results.</td>
+							<td>&lt;meta name="robots" content="follow, index"/&gt;</td>
+						</tr>
+						<tr>
+							<td>viewport</td>
+							<td>Controls the way search engines render and display a page on different devices. This is meant to be used on your whole website to adapt the content for the mobile version.</td>
+							<td>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"/&gt;</td>
+						</tr>
+					</table>
+
+					<p>There are hundreds of others at your disposal that help with site ranking and further explaining your page. These include Twitter cards, Language, and Notranslate meta tags. Expirement with which ones best suit your page/site and remember to reference the <a href="practices.html">Best Practices</a> page. Resources are avaliable in the <a href="sources.html">Sources</a> page located on the footer.
+
+				<!-- HTTP-Equiv section !-->
+				<h1>The http-equiv Attribute</h1>
+					<p>There is also the http-equiv attribute, which provides information on what can be given by an HTTP header.</p>
+
+					<!-- HTTP-Equiv Attribute Details Table !-->
+					<table>
+						<caption>http-equiv Attributes</caption>
+						<tr>
+							<th>Attribute</th>
+							<th>Description</th>
+							<th>Example</th>
+						</tr>
+						<tr>
+							<td>content-type</td>
+							<td>Specifies the MIME type and encoding for the HTML page.</td>
+							<td>&lt;meta http-equiv="content-type" content="text/html; charset=UTF-8"&gt;</td>
+						</tr>
+						<tr>
+							<td>default-style</td>
+							<td>Specifies the preferred stylesheet to use.</td>
+							<td>&lt;meta http-equiv="default-style" content="styles.css"&gt;</td>
+						</tr>
+						<tr>
+							<td>refresh</td>
+							<td>Specifies a time interval in seconds for the document to refresh itself.
+								<p class="important">WARNING:
+								This is a huge risk for those who use assistive technology if the time duration is too short or for those with low vision conditions. Avoid this attribute if possible.</p>
+							</td>
+							<td>&lt;meta http-equiv=”refresh” content=”250”&gt;</td>
+						</tr>
+					</table>
+
+				<h1>Useful Tags For Ranking</h1>
+					<p>Not all meta tags directly impact your ranking, which is why there are some tags that you should focus your attention on and others that aren’t as necessary.</p>
+					<p>Some examples of essential tags include the title, meta description, alternative text (alt) tag, and robots meta tag. Other tags like the keywords, copyright, and site verification tags should be ignored as more modern approaches are made (eg. everyone places their copyright in the footer nowadays).</p>
+			</main>
+
+			<footer>
+				&copy; 2023 Meta Your Page
+				<p><a href="sources.html">Sources</a></p>
+			</footer>
+		</div>
+	</body>
+</html>
